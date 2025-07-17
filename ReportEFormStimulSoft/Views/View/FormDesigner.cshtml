@@ -1,0 +1,18 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Form Designer";
+}
+<div id="stiFormDesigner"></div>
+<script src="~/js/stimulsoft.reports.js"></script>
+<script src="~/js/stimulsoft.designer.js"></script>
+<script type="module">
+    import * as StimulsoftForms from '/stimul-form/esm2022/stimulsoft-forms.mjs';
+
+    // Tente acessar a API do Forms Designer
+    // Exemplo (pode não funcionar, depende da exportação do módulo):
+    // var designer = new StimulsoftForms.StiFormDesigner({
+    //     action: "/View/Action"
+    // });
+    // designer.renderHtml("stiFormDesigner");
+    // designer.openForm("@Model");
+</script>

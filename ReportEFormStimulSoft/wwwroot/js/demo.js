@@ -3,203 +3,212 @@
 function createReportsButtons() {
     var reportsContainer = document.getElementById("stiReportsContainer");
 
-    var allReports = [
+    var allItems = [
         {
             category: "Get Started Reports",
-            reports: {
-                "BillingStatement": "Billing Statement",
-                "Order": "Order",
-                "InsuranceWithSelectingCountry": "Insurance By Country",
-                "ServiceInvoice": "Service Invoice",
-                "Quotation": "Quotation",
-                "BusinessInvoice": "Business Invoice",
-                "SwitzerlandInvoice": "Switzerland Invoice"
-            }
+            items: [
+                { name: "BillingStatement", label: "Billing Statement", type: "report" },
+                { name: "Order", label: "Order", type: "report" },
+                { name: "InsuranceWithSelectingCountry", label: "Insurance By Country", type: "report" },
+                { name: "ServiceInvoice", label: "Service Invoice", type: "report" },
+                { name: "Quotation", label: "Quotation", type: "report" },
+                { name: "BusinessInvoice", label: "Business Invoice", type: "report" },
+                { name: "SwitzerlandInvoice", label: "Switzerland Invoice", type: "report" }
+            ]
         },
         {
             category: "Basic Reports",
-            reports: {
-                "SimpleList": "Simple List",
-                "TwoSimpleLists": "Two Simple Lists",
-                "HighlightCondition": "Highlight Condition",
-                "Shapes": "Shapes",
-                "Images": "Images",
-                "Watermark": "Watermark",
-                "BarCodes": "Bar-Codes",
-                "HtmlTags": "Html-Tags",
-                "Indicators": "Indicators"
-            }
+            items: [
+                { name: "SimpleList", label: "Simple List", type: "report" },
+                { name: "TwoSimpleLists", label: "Two Simple Lists", type: "report" },
+                { name: "HighlightCondition", label: "Highlight Condition", type: "report" },
+                { name: "Shapes", label: "Shapes", type: "report" },
+                { name: "Images", label: "Images", type: "report" },
+                { name: "Watermark", label: "Watermark", type: "report" },
+                { name: "BarCodes", label: "Bar-Codes", type: "report" },
+                { name: "HtmlTags", label: "Html-Tags", type: "report" },
+                { name: "Indicators", label: "Indicators", type: "report" }
+            ]
         },
         {
             category: "Reports with Columns",
-            reports: {
-                "MultiColumnList": "Multi-Column List",
-                "MultiColumnBandsAcrossThenDown": "Multi-Column Bands - Across then Down",
-                "MultiColumnBandsDownThenAcross": "Multi-Column Bands - Down then Across",
-                "VehicleProductionLabels": "Vehicle Production Labels"
-            }
+            items: [
+                { name: "MultiColumnList", label: "Multi-Column List", type: "report" },
+                { name: "MultiColumnBandsAcrossThenDown", label: "Multi-Column Bands - Across then Down", type: "report" },
+                { name: "MultiColumnBandsDownThenAcross", label: "Multi-Column Bands - Down then Across", type: "report" },
+                { name: "VehicleProductionLabels", label: "Vehicle Production Labels", type: "report" }
+            ]
         },
         {
             category: "Master-Detail Reports",
-            reports: {
-                "MasterDetail": "Master-Detail",
-                "MasterDetailSubdetail": "Master-Detail-Subdetail",
-                "MasterDetailWithColumns": "Master-Detail with Columns",
-                "TwoMastersOnOneDetail": "Two Masters on One Detail",
-                "MasterDetailOnDataBand": "Master-Detail on DataBand"
-            }
+            items: [
+                { name: "MasterDetail", label: "Master-Detail", type: "report" },
+                { name: "MasterDetailSubdetail", label: "Master-Detail-Subdetail", type: "report" },
+                { name: "MasterDetailWithColumns", label: "Master-Detail with Columns", type: "report" },
+                { name: "TwoMastersOnOneDetail", label: "Two Masters on One Detail", type: "report" },
+                { name: "MasterDetailOnDataBand", label: "Master-Detail on DataBand", type: "report" }
+            ]
         },
         {
             category: "Reports with Groups",
-            reports: {
-                "SimpleGroup": "Simple Group",
-                "NestedGroups": "Nested Groups",
-                "MasterDetailWithGroups": "Master-Detail with Groups",
-                "MultiColumnGroup": "Multi-Column Group",
-                "AllGroupFootersAtEnd": "All Group Footers at End"
-            }
+            items: [
+                { name: "SimpleGroup", label: "Simple Group", type: "report" },
+                { name: "NestedGroups", label: "Nested Groups", type: "report" },
+                { name: "MasterDetailWithGroups", label: "Master-Detail with Groups", type: "report" },
+                { name: "MultiColumnGroup", label: "Multi-Column Group", type: "report" },
+                { name: "AllGroupFootersAtEnd", label: "All Group Footers at End", type: "report" }
+            ]
         },
         {
             category: "Hierarchical Reports",
-            reports: {
-                "Tree": "Tree",
-                "TreeWithTotals": "Tree with Totals",
-                "TreeWithTotalsAllLevels": "Tree with Totals - All Levels",
-                "TreeWithLockedComponents": "Tree with Locked Components"
-            }
+            items: [
+                { name: "Tree", label: "Tree", type: "report" },
+                { name: "TreeWithTotals", label: "Tree with Totals", type: "report" },
+                { name: "TreeWithTotalsAllLevels", label: "Tree with Totals - All Levels", type: "report" },
+                { name: "TreeWithLockedComponents", label: "Tree with Locked Components", type: "report" }
+            ]
         },
         {
             category: "Parameters",
-            reports: {
-                "ParametersDetailedCategories": "Detailed Categories",
-                "ParametersSelectingCountry": "Selecting Country",
-                "ParametersInvoice": "Invoice",
-                "ParametersDependentParameter": "Dependent Parameter"
-            }
+            items: [
+                { name: "ParametersDetailedCategories", label: "Detailed Categories", type: "report" },
+                { name: "ParametersSelectingCountry", label: "Selecting Country", type: "report" },
+                { name: "ParametersInvoice", label: "Invoice", type: "report" },
+                { name: "ParametersDependentParameter", label: "Dependent Parameter", type: "report" }
+            ]
         },
         {
             category: "Interactive Reports",
-            reports: {
-                "ListOfProducts": "List of Products",
-                "CrossTabWithDetailing": "Cross-Tab with Detailing",
-                "Sorting": "Sorting",
-                "GroupWithCollapsing": "Group with Collapsing",
-                "EditableReport": "Editable",
-                "BookmarksAndHyperlinks": "Bookmarks and Hyperlinks"
-            }
+            items: [
+                { name: "ListOfProducts", label: "List of Products", type: "report" },
+                { name: "CrossTabWithDetailing", label: "Cross-Tab with Detailing", type: "report" },
+                { name: "Sorting", label: "Sorting", type: "report" },
+                { name: "GroupWithCollapsing", label: "Group with Collapsing", type: "report" },
+                { name: "EditableReport", label: "Editable", type: "report" },
+                { name: "BookmarksAndHyperlinks", label: "Bookmarks and Hyperlinks", type: "report" }
+            ]
         },
         {
             category: "Table",
-            reports: {
-                "TableSimpleTable": "Simple Table",
-                "TableSimpleGroup": "Simple Group",
-                "TableFixedWidthOfColumns": "Fixed Width of Columns"
-            }
+            items: [
+                { name: "TableSimpleTable", label: "Simple Table", type: "report" },
+                { name: "TableSimpleGroup", label: "Simple Group", type: "report" },
+                { name: "TableFixedWidthOfColumns", label: "Fixed Width of Columns", type: "report" }
+            ]
         },
         {
             category: "Real-life Charts",
-            reports: {
-                "GlobalGrowth": "Global Growth",
-                "MigrationByDecadeInUSA": "Migration By Decade In USA",
-                "NaturalGasProduction": "Natural Gas Production",
-                "TopAutoSalesInUSA16": "Top Auto Sales In USA 16"
-            }
+            items: [
+                { name: "GlobalGrowth", label: "Global Growth", type: "report" },
+                { name: "MigrationByDecadeInUSA", label: "Migration By Decade In USA", type: "report" },
+                { name: "NaturalGasProduction", label: "Natural Gas Production", type: "report" },
+                { name: "TopAutoSalesInUSA16", label: "Top Auto Sales In USA 16", type: "report" }
+            ]
         },
         {
             category: "Charts",
-            reports: {
-                "3DPie": "3D Pie",
-                "Area": "Area",
-                "Bubble": "Bubble",
-                "ClusteredBar": "Clustered Bar",
-                "ClusteredColumn": "Clustered Column",
-                "Doughnut": "Doughnut",
-                "Financial": "Financial",
-                "Funnel": "Funnel",
-                "Gantt": "Gantt",
-                "Histogram": "Histogram",
-                "Line": "Line",
-                "Pareto": "Pareto",
-                "Pictorial": "Pictorial",
-                "Pie": "Pie",
-                "Radar": "Radar",
-                "Range": "Range",
-                "Scatter": "Scatter",
-                "Stepped": "Stepped",
-                "Sunburst": "Sunburst",
-                "Treemap": "Treemap",
-                "Waterfall": "Waterfall",
-            }
+            items: [
+                { name: "3DPie", label: "3D Pie", type: "report" },
+                { name: "Area", label: "Area", type: "report" },
+                { name: "Bubble", label: "Bubble", type: "report" },
+                { name: "ClusteredBar", label: "Clustered Bar", type: "report" },
+                { name: "ClusteredColumn", label: "Clustered Column", type: "report" },
+                { name: "Doughnut", label: "Doughnut", type: "report" },
+                { name: "Financial", label: "Financial", type: "report" },
+                { name: "Funnel", label: "Funnel", type: "report" },
+                { name: "Gantt", label: "Gantt", type: "report" },
+                { name: "Histogram", label: "Histogram", type: "report" },
+                { name: "Line", label: "Line", type: "report" },
+                { name: "Pareto", label: "Pareto", type: "report" },
+                { name: "Pictorial", label: "Pictorial", type: "report" },
+                { name: "Pie", label: "Pie", type: "report" },
+                { name: "Radar", label: "Radar", type: "report" },
+                { name: "Range", label: "Range", type: "report" },
+                { name: "Scatter", label: "Scatter", type: "report" },
+                { name: "Stepped", label: "Stepped", type: "report" },
+                { name: "Sunburst", label: "Sunburst", type: "report" },
+                { name: "Treemap", label: "Treemap", type: "report" },
+                { name: "Waterfall", label: "Waterfall", type: "report" }
+            ]
         },
         {
             category: "Cross-Tabs",
-            reports: {
-                "StandardCrossTab": "Standard Cross-Tab",
-                "CrossTabWithoutColumns": " Cross-Tab without Columns",
-                "CrossTabWithoutRows": "Cross-Tab without Rows",
-                "CrossTabWithHighlightCondition1": "Cross-Tab with Highlight Condition",
-                "CrossTabAndCrossBands": "Cross-Tab and Cross Bands",
-                "CrossTabOnPage": "Cross-Tab on Page"
-            }
+            items: [
+                { name: "StandardCrossTab", label: "Standard Cross-Tab", type: "report" },
+                { name: "CrossTabWithoutColumns", label: "Cross-Tab without Columns", type: "report" },
+                { name: "CrossTabWithoutRows", label: "Cross-Tab without Rows", type: "report" },
+                { name: "CrossTabWithHighlightCondition1", label: "Cross-Tab with Highlight Condition", type: "report" },
+                { name: "CrossTabAndCrossBands", label: "Cross-Tab and Cross Bands", type: "report" },
+                { name: "CrossTabOnPage", label: "Cross-Tab on Page", type: "report" }
+            ]
         },
         {
             category: "Empty Rows",
-            reports: {
-                "EmptyRowsMasterDetail": " Master-Detail",
-                "EmptyRowsInvoice": "Invoice"
-            }
+            items: [
+                { name: "EmptyRowsMasterDetail", label: "Master-Detail", type: "report" },
+                { name: "EmptyRowsInvoice", label: "Invoice", type: "report" }
+            ]
         },
         {
             category: "Panels",
-            reports: {
-                "PanelsSideBySideLists": "Side-by-Side Lists",
-                "PanelsSideBySideGroups": "Side-by-Side Groups"
-            }
+            items: [
+                { name: "PanelsSideBySideLists", label: "Side-by-Side Lists", type: "report" },
+                { name: "PanelsSideBySideGroups", label: "Side-by-Side Groups", type: "report" }
+            ]
         },
         {
             category: "Sub-Reports",
-            reports: {
-                "SubReportsSideBySideListsOnDataBand": "Side-by-Side Lists on DataBand",
-                "SubReportsMasterDetail": "Master-Detail"
-            }
+            items: [
+                { name: "SubReportsSideBySideListsOnDataBand", label: "Side-by-Side Lists on DataBand", type: "report" },
+                { name: "SubReportsMasterDetail", label: "Master-Detail", type: "report" }
+            ]
         },
         {
             category: "Table Of Contents",
-            reports: {
-                "MasterDetailReportWithTOC": "Master-Detail Report With TOC",
-                "MultiColumnListWithTOC": "Multi-Column List With TOC",
-                "PanelsWithTOC": "Panels With TOC",
-                "TableWithTOC": "Table With TOC"
-            }
+            items: [
+                { name: "MasterDetailReportWithTOC", label: "Master-Detail Report With TOC", type: "report" },
+                { name: "MultiColumnListWithTOC", label: "Multi-Column List With TOC", type: "report" },
+                { name: "PanelsWithTOC", label: "Panels With TOC", type: "report" },
+                { name: "TableWithTOC", label: "Table With TOC", type: "report" }
+            ]
         },
         {
             category: "Real-life Reports",
-            reports: {
-                "AlibabaRevenueStats": "Alibaba Revenue Stats",
-                "BRICGDPStats": "BRIC GDP Stats",
-                "ChinaConstructionBank": "China Construction Bank",
-                "ManufactureInChina": "Manufacture in China",
-                "TopCountriesByGDPIn2019": "Top Countries by GDP in 2019",
-                "Payroll": "Payroll",
-                "VehicleSalesWorldwide": "Vehicle Sales Worldwide"
-            }
+            items: [
+                { name: "AlibabaRevenueStats", label: "Alibaba Revenue Stats", type: "report" },
+                { name: "BRICGDPStats", label: "BRIC GDP Stats", type: "report" },
+                { name: "ChinaConstructionBank", label: "China Construction Bank", type: "report" },
+                { name: "ManufactureInChina", label: "Manufacture in China", type: "report" },
+                { name: "TopCountriesByGDPIn2019", label: "Top Countries by GDP in 2019", type: "report" },
+                { name: "Payroll", label: "Payroll", type: "report" },
+                { name: "VehicleSalesWorldwide", label: "Vehicle Sales Worldwide", type: "report" }
+            ]
+        },
+        {
+            category: "Forms",
+            items: [
+                { name: "Order", label: "Order Form", type: "form" }
+            ]
         }
-    ]
+    ];
 
-    for (var i = 0; i < allReports.length; i++) {
-        reportsContainer.appendChild(stiCategoryHeader(allReports[i].category));
+    for (var i = 0; i < allItems.length; i++) {
+        reportsContainer.appendChild(stiCategoryHeader(allItems[i].category));
 
-        for (var reportName in allReports[i].reports) {
-            var button = stiReportButton(allReports[i].reports[reportName], "/../images/Report_x2.png");
+        for (var j = 0; j < allItems[i].items.length; j++) {
+            var item = allItems[i].items[j];
+            var icon = item.type === "form" ? "/../images/Form_x2.png" : "/../images/Report_x2.png";
+            var button = stiReportButton(item.label, icon, item.type === "form");
             reportsContainer.appendChild(button);
-            button.reportName = reportName;
-            button.id = reportName;
+            button.reportName = item.name;
+            button.id = (item.type === "form" ? "form_" : "") + item.name;
+            button.isForm = item.type === "form";
             reportButtonsId.push(button.id);
         }
     }
 }
 
-function stiReportButton(text, imageName) {
+function stiReportButton(text, imageName, isForm) {
     var button = document.createElement("div");
     button.className = "stiReportButton";
     button.style.display = "block";
@@ -240,7 +249,25 @@ function stiReportButton(text, imageName) {
     };
 
     button.onclick = function () {
-        loadReportToViewer(this.reportName);
+        if (this.isForm) {
+            loadFormToViewer(this.reportName);
+        } else {
+            loadReportToViewer(this.reportName);
+        }
+    }
+
+    if (isForm) {
+        var editCell = document.createElement("td");
+        var editBtn = document.createElement("button");
+        editBtn.innerHTML = "Editar";
+        editBtn.className = "btn btn-sm btn-primary";
+        editBtn.style.marginLeft = "8px";
+        editBtn.onclick = function (e) {
+            e.stopPropagation();
+            loadFormToDesigner(text);
+        };
+        editCell.appendChild(editBtn);
+        tr.appendChild(editCell);
     }
 
     return button;
@@ -265,6 +292,22 @@ function loadReportToViewer(reportName) {
 
     var mainFrame = document.getElementById("stiMainFrame");
     mainFrame.src = "/View/Reports/" + reportName;
+    showProgress();
+}
+
+function loadFormToViewer(formName) {
+    setSelectedReportButton("form_" + formName);
+
+    var mainFrame = document.getElementById("stiMainFrame");
+    mainFrame.src = "/View/FormViewer/" + formName;
+    showProgress();
+}
+
+function loadFormToDesigner(formName) {
+    setSelectedReportButton("form_" + formName);
+
+    var mainFrame = document.getElementById("stiMainFrame");
+    mainFrame.src = "/View/FormDesigner/" + formName;
     showProgress();
 }
 

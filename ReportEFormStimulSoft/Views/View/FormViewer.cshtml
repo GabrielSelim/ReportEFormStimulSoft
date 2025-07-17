@@ -1,0 +1,14 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Form Viewer";
+}
+<div id="stiFormViewer"></div>
+<script src="~/js/stimulsoft.reports.js"></script>
+<script src="~/js/stimulsoft.viewer.js"></script>
+<script>
+    var viewer = new Stimulsoft.Forms.StiFormViewer({
+        action: "/View/Action"
+    });
+    viewer.renderHtml("stiFormViewer");
+    viewer.openForm("@Model");
+</script>
